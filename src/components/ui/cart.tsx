@@ -2,6 +2,7 @@ import { useCartStore } from "@/store/cart-store"
 import { Card, CardContent, CardHeader, CardTitle } from "./card"
 import RemoveIcon from "@/../public/assets/images/icon-remove-item.svg?react"
 import CarbonNeutralIcon from "@/../public/assets/images/icon-carbon-neutral.svg?react"
+import { ConfirmationDialog } from "./confirmation-dialog"
 
 export const Cart = () => {
   const { products, removeFromCart, total } = useCartStore()
@@ -53,13 +54,14 @@ export const Cart = () => {
                 <CarbonNeutralIcon className="size-7" />
                 <p>This is a <span className="font-bold text-brand-rose-900">carbon-neutral</span> delivery</p>
               </div>
-
-              <button className="flex items-center justify-center
+              <ConfirmationDialog>
+                <button className="flex items-center justify-center
                 bg-brand-red p-5 rounded-full text-white font-semibold
                 hover:bg-[#952c0c] text-lg transition-all duration-300 ease-in-out"
-              >
-                Confirm Order
-              </button>
+                >
+                  Confirm Order
+                </button>
+              </ConfirmationDialog>
             </div>
           </div>
         )}

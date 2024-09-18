@@ -1,10 +1,11 @@
+import type { Image } from '@/types/menu'
 import { create } from 'zustand'
 
-interface Product {
+export interface Product {
   name: string
   price: number
   quantity: number
-  image: string
+  image: Image
 }
 
 interface CartState {
