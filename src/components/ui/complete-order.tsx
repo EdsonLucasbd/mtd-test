@@ -5,10 +5,10 @@ import { useCartStore } from "@/store/cart-store"
 export const CompleteOrder = () => {
   const { clearCart } = useCartStore()
   return (
-    <div className="flex flex-col items-center gap-10 w-full text-center">
+    <div className="flex flex-col items-center gap-5 lg:gap-10 w-full text-center">
       <Lottie animationData={check} loop={false} className="size-[300px]" />
       <p className="text-brand-rose-500 font-semibold text-lg">Your order has been submitted successfully!</p>
-      <div className="w-full">
+      <div className="w-full py-5 lg:py-0">
         <button className="w-full bg-brand-red p-3 rounded-full text-white hover:bg-[#952c0c]"
           onClick={() => clearCart()}
         >

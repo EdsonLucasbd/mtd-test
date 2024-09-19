@@ -8,17 +8,17 @@ export const Cart = () => {
   const { products, removeFromCart, total } = useCartStore()
 
   return (
-    <Card className='w-[450px] h-fit bg-white rounded-lg border-none shadow-none py-3'>
-      <CardHeader>
-        <CardTitle className="text-brand-red font-bold mb-10">
+    <Card className='w-full lg:w-[450px] h-fit bg-white rounded-lg border-none shadow-none py-3'>
+      <CardHeader className="pb-2 px-5 lg:px-6 lg:pb-0">
+        <CardTitle className="text-brand-red font-bold">
           You Cart ({products.length})
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col items-center justify-center">
+      <CardContent className="flex flex-col p-5 lg:p-6 items-center justify-center">
         {products.length === 0 ? (
           <>
-            <img src="/assets/images/illustration-empty-cart.svg" alt="Cart is empty" />
-            <p className="text-brand-rose-400 my-5">Your added items will appear here</p>
+            <img src="/assets/images/illustration-empty-cart.svg" alt="Cart is empty" className="mt-6" />
+            <p className="text-brand-rose-400 my-5 text-sm lg:text-base">Your added items will appear here</p>
           </>
         ) : (
           <div className="flex flex-col w-full divide-y">
@@ -48,15 +48,15 @@ export const Cart = () => {
                 <p className="font-semibold text-brand-rose-500">Order Total</p>
                 <p className="text-brand-rose-900 font-bold text-2xl">${total.toFixed(2)}</p>
               </div>
-              <div className="flex items-center justify-center gap-2
+              <div className="flex items-center justify-center gap-1 lg:gap-2
                 bg-brand-rose-50 p-5 rounded-xl text-brand-rose-500 font-semibold"
               >
-                <CarbonNeutralIcon className="size-7" />
-                <p>This is a <span className="font-bold text-brand-rose-900">carbon-neutral</span> delivery</p>
+                <CarbonNeutralIcon className="lg:size-7" />
+                <p className="text-xs lg:text-base">This is a <span className="font-bold text-brand-rose-900">carbon-neutral</span> delivery</p>
               </div>
               <ConfirmationDialog>
                 <button className="flex items-center justify-center
-                bg-brand-red p-5 rounded-full text-white font-semibold
+                bg-brand-red p-3 lg:p-5 rounded-full text-white font-semibold
                 hover:bg-[#952c0c] text-lg transition-all duration-300 ease-in-out"
                 >
                   Confirm Order
