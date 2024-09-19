@@ -15,7 +15,9 @@ export const ItemCard = ({ name, category, price, image }: MenuItem) => {
       <div className="relative w-full">
         {products.some((product) => product.name === name) ? (
           <>
-            <img src={!isDesktop ? image.mobile : image.desktop} alt={`${name} image`} className="w-full h-auto lg:w-[350px] lg:h-[320px] rounded-md ring-2 ring-brand-red transition-all ease-in-out duration-300" />
+            <ItemDetail name={name} image={image}>
+              <img src={!isDesktop ? image.mobile : image.desktop} alt={`${name} image`} className="w-full h-auto lg:w-[350px] lg:h-[320px] rounded-md ring-2 ring-brand-red transition-all ease-in-out duration-300" />
+            </ItemDetail>
             <div className="absolute flex items-center justify-between gap-3 w-[140px] h-11 lg:w-[220px] lg:h-[50px] bg-brand-red border 
             border-brand-red rounded-full text-sm lg:text-lg px-3 lg:px-5
               translate-x-[-50%] translate-y-[-50%] left-1/2 font-semibold">
