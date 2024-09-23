@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger } from './dialog'
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger } from './ui/dialog'
 import { DialogTitle } from '@radix-ui/react-dialog'
 import ConfirmedIcon from '@/../public/assets/images/icon-order-confirmed.svg?react'
 import { useCartStore } from '@/store/cart-store'
 import { ConfirmationItem } from './confirmation-item'
 import { CompleteOrder } from './complete-order'
-import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from './drawer'
+import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from './ui/drawer'
 import { useMediaQuery } from '@/hooks/use-media-query'
 
 type PointerDownOutsideEvent = CustomEvent<{

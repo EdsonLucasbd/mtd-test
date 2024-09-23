@@ -1,9 +1,9 @@
 import { useCartStore } from "@/store/cart-store"
-import { Card, CardContent, CardHeader, CardTitle } from "./card"
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import RemoveIcon from "@/../public/assets/images/icon-remove-item.svg?react"
 import CarbonNeutralIcon from "@/../public/assets/images/icon-carbon-neutral.svg?react"
 import { ConfirmationDialog } from "./confirmation-dialog"
-import { ScrollArea } from "./scroll-area"
+import { ScrollArea } from "./ui/scroll-area"
 
 export const Cart = () => {
   const { products, removeFromCart, total } = useCartStore()

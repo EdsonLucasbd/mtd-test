@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import type { MenuData } from "./types/menu";
-import { ItemCard } from "./components/ui/item-card";
-import { Cart } from "./components/ui/cart";
-import { ItemSkeleton } from "./components/ui/item-skeleton";
+import { ItemCard } from "./components/item-card";
+import { Cart } from "./components/cart";
+import { ItemSkeleton } from "./components/item-skeleton";
 
 function App() {
   const [menuData, setMenuData] = useState<MenuData | undefined>()

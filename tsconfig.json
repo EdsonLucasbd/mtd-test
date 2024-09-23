@@ -14,6 +14,10 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    /* Bundler mode */
+    "types": [
+      "vitest/globals"
+    ],
   }
 }

@@ -1,7 +1,7 @@
 import { useMediaQuery } from "@/hooks/use-media-query"
 import type { MenuItem } from "@/types/menu"
-import { Dialog, DialogClose, DialogContent, DialogFooter, DialogTrigger } from "./dialog"
-import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerTrigger } from "./drawer"
+import { Dialog, DialogClose, DialogContent, DialogFooter, DialogTrigger } from "./ui/dialog"
+import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerTrigger } from "./ui/drawer"
 
 type ItemDetail = Omit<MenuItem, "category" | "price">
 interface ItemDetailProps extends ItemDetail {
