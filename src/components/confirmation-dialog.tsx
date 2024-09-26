@@ -7,6 +7,7 @@ import { ConfirmationItem } from './confirmation-item'
 import { CompleteOrder } from './complete-order'
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from './ui/drawer'
 import { useMediaQuery } from '@/hooks/use-media-query'
+import { ScrollArea } from './ui/scroll-area'
 
 type PointerDownOutsideEvent = CustomEvent<{
   originalEvent: PointerEvent;
@@ -55,7 +56,18 @@ export const ConfirmationDialog = ({ children }: { children: React.ReactNode }) 
                   We hoppe you enjoy your food!
                 </DialogDescription>
               </DialogHeader>
-              <div className='flex flex-col bg-brand-rose-50 rounded-lg divide-y'>
+              <ScrollArea className='hidden lg:flex flex-col max-h-[300px] bg-brand-rose-50 rounded-lg'>
+                <div className='divide-y'>
+                  {products.map((product) => (
+                    <ConfirmationItem key={product.name} {...product} />
+                  ))}
+                  <div className="flex items-center justify-between p-5">
+                    <p className='font-semibold text-sm'>Order Total</p>
+                    <p className='text-brand-rose-900 font-bold text-2xl'>${total.toFixed(2)}</p>
+                  </div>
+                </div>
+              </ScrollArea>
+              <div className='flex lg:hidden flex-col bg-brand-rose-50 rounded-lg divide-y'>
                 {products.map((product) => (
                   <ConfirmationItem key={product.name} {...product} />
                 ))}

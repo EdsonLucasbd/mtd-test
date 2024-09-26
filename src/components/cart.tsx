@@ -9,7 +9,7 @@ export const Cart = () => {
   const { products, removeFromCart, total } = useCartStore()
 
   return (
-    <Card className='w-full lg:w-[450px] lg:fixed lg:right-[199px] h-fit bg-white rounded-lg border-none shadow-none py-3'>
+    <Card className='w-full lg:w-[400px] lg:fixed lg:right-[80px] h-fit bg-white rounded-lg border-none shadow-none py-3'>
       <CardHeader className="pb-2 px-5 lg:px-6 lg:pb-0">
         <CardTitle className="text-brand-red font-bold">
           You Cart ({products.length})
@@ -23,7 +23,7 @@ export const Cart = () => {
           </>
         ) : (
           <div className="flex flex-col w-full lg:divide-y">
-            <ScrollArea className="hidden lg:flex flex-col max-h-[350px]">
+            <ScrollArea className="hidden lg:flex flex-col max-h-[200px]">
               {
                 products.map((product) => (
                   <div key={product.name} className="flex items-center justify-between py-5 border-t first:border-none">
